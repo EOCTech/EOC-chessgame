@@ -50,13 +50,10 @@ const knight1 = new Chesspiece("knight", "b8", "black", "1", false, false, false
 const knight1 = new Chesspiece("knight", "g8", "black", "1", false, false, false)
 
 /* Gavin getRow and getColumn code */
-let string = "A7";
-
 function getColumn(str) {
     index = 0;
     return str.charAt(index);
 }
-console.log(getColumn(string)); 
 
 function getRow(str) {
     index = 1;
