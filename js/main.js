@@ -57,46 +57,6 @@ const knight2 = new Chesspiece("knight", "g1", "white", "1", false, false, false
 const knight3 = new Chesspiece("knight", "b8", "black", "1", false, false, false);
 const knight4 = new Chesspiece("knight", "g8", "black", "1", false, false, false);
 
-queen1.pos = "c5";
-
-queen1.possiblePos = possiblePos(queen1);
-
-
-function possiblePos(obj) {
-    let possiblePositions = [];
-
-    if (obj.type == "pawn") {
-        
-    }
-
-    if (obj.type == "queen") {
-        // looking for possible positions
-        // get the current position
-
-        let currentPosition = obj.pos; // c5
-
-        // get the letter
-        let letter = getColumn(currentPosition); // c
-
-        // get the number
-        let number = getRow(currentPosition); // 5, converted to an integer from string
-
-        let newLetter = letter;
-        let newNumber = true;
-
-        while (newLetter != false && newNumber < 8) {
-            newLetter = nextLetter(newLetter); // d
-            newNumber = number++; // 6
-            console.log(newLetter + newNumber); // d6
-            possiblePositions.push(newLetter + newNumber);
-
-        }
-
-
-        return possiblePositions;
-    }
-}
-
 /* Gavin getRow and getColumn code */
 function getColumn(str) {
     index = 0;
