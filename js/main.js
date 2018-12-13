@@ -60,54 +60,72 @@ chessPieces.push(bishop1);
 const bishop2 = new Chesspiece("bishop", "f1", "white", "1", false, false, false);
 chessPieces.push(bishop2);
 const bishop3 = new Chesspiece("bishop", "c8", "black", "1", false, false, false);
-chessPieces.push(pawn2);
+chessPieces.push(bishop3);
 const bishop4 = new Chesspiece("bishop", "f8", "black", "1", false, false, false);
-chessPieces.push(pawn2);
+chessPieces.push(bishop4);
 
 const queen1 = new Chesspiece("queen", "e1", "white", "1", false, false, false);
-chessPieces.push(pawn2);
+chessPieces.push(queen1);
 const queen2 = new Chesspiece("queen", "e8", "black", "1", false, false, false);
-chessPieces.push(pawn2);
+chessPieces.push(queen2);
 
 const king1 = new Chesspiece("king", "d1", "white", "1", false, false, false);
-chessPieces.push(pawn2);
+chessPieces.push(king1);
 const king2 = new Chesspiece("king", "d8", "black", "1", false, false, false);
-chessPieces.push(pawn2);
+chessPieces.push(king2);
 
 const knight1 = new Chesspiece("knight", "b1", "white", "1", false, false, false);
-chessPieces.push(pawn2);
+chessPieces.push(knight1);
 const knight2 = new Chesspiece("knight", "g1", "white", "1", false, false, false);
-chessPieces.push(pawn2);
+chessPieces.push(knight2);
 const knight3 = new Chesspiece("knight", "b8", "black", "1", false, false, false);
-chessPieces.push(pawn2);
+chessPieces.push(knight3);
 const knight4 = new Chesspiece("knight", "g8", "black", "1", false, false, false);
-chessPieces.push(pawn2);
+chessPieces.push(knight4);
 
 queen1.pos = "c5";
-console.log(possiblePos(queen1))
+
+queen1.possiblePos = possiblePos(queen1);
+
+
 function possiblePos(obj) {
-    let possiblePositions = []
+    let possiblePositions = [];
+    if (obj.type == "knight") {
+        
+    }
+
+    if (obj.type == "pawn") {
+        
+    }
 
     if (obj.type == "queen") {
-        // Looking for possible positions
-        // get current position
-        let currentPosition = obj.pos; //c5
-        // get letter
+        // looking for possible positions
+        // get the current position
+
+        let currentPosition = obj.pos; // c5
+
+        // get the letter
         let letter = getColumn(currentPosition); // c
-        // get number
-        let number = getRow(currentPosition); // 5
+
+        // get the number
+        let number = getRow(currentPosition); // 5, converted to an integer from string
 
         let newLetter = letter;
         let newNumber = true;
+
         while (newLetter != false && newNumber < 8) {
             newLetter = nextLetter(newLetter); // d
-            newNumber = number++;
-            console.log(newLetter + "" + newNumber);
-            possiblePositions.push(newLetter + "" + newNumber);
+            newNumber = number++; // 6
+            console.log(newLetter + newNumber); // d6
+            possiblePositions.push(newLetter + newNumber);
+
         }
+
+
         return possiblePositions;
     }
 }
+
 /* Gavin getRow and getColumn code */
 function getColumn(str) {
     index = 0;
