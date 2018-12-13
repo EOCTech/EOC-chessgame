@@ -83,6 +83,7 @@ chessPieces.push(knight3);
 const knight4 = new Chesspiece("knight", "g8", "black", "1", false, false, false);
 chessPieces.push(knight4);
 
+<<<<<<< HEAD
 queen1.pos = "c5";
 
 queen1.possiblePos = possiblePos(queen1);
@@ -126,6 +127,8 @@ function possiblePos(obj) {
     }
 }
 
+=======
+>>>>>>> master
 /* Gavin getRow and getColumn code */
 function getColumn(str) {
     index = 0;
