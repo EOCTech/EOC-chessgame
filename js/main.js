@@ -17,3 +17,16 @@ const piece4 = new Chesspiece("queen", "A1", "black", "1", false, false, false)
 const piece5 = new Chesspiece("king", "A1", "black", "1", false, false, false)
 const piece6 = new Chesspiece("knight", "A1", "black", "1", false, false, false)
 
+let string = "A7";
+
+function getColumn(str) {
+    index = 0;
+    return str.charAt(index);
+}
+console.log(getColumn(string)); 
+
+function getRow(str) {
+    index = 1;
+    return str.charAt(index);
+}
+console.log(getRow(string));
