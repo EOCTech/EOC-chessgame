@@ -27,35 +27,61 @@ chessPieces.push(pawn1);
 const pawn2 = new Chesspiece("pawn", "b2", "white", "1", false, false, false);
 chessPieces.push(pawn2);
 const pawn3 = new Chesspiece("pawn", "c2", "white", "1", false, false, false);
+chessPieces.push(pawn3);
 const pawn4 = new Chesspiece("pawn", "d2", "white", "1", false, false, false);
+chessPieces.push(pawn4);
 const pawn5 = new Chesspiece("pawn", "e2", "white", "1", false, false, false);
+chessPieces.push(pawn5);
 const pawn6 = new Chesspiece("pawn", "f2", "white", "1", false, false, false);
+chessPieces.push(pawn6);
 const pawn7 = new Chesspiece("pawn", "g2", "white", "1", false, false, false);
+chessPieces.push(pawn7);
 const pawn8 = new Chesspiece("pawn", "h2", "white", "1", false, false, false);
+chessPieces.push(pawn8);
 const pawn9 = new Chesspiece("pawn", "a7", "black", "1", false, false, false);
+chessPieces.push(pawn9);
 const pawn10 = new Chesspiece("pawn", "b7", "black", "1", false, false, false);
+chessPieces.push(pawn10);
 const pawn11 = new Chesspiece("pawn", "c7", "black", "1", false, false, false);
+chessPieces.push(pawn11);
 const pawn12 = new Chesspiece("pawn", "d7", "black", "1", false, false, false);
+chessPieces.push(pawn12);
 const pawn13 = new Chesspiece("pawn", "e7", "black", "1", false, false, false);
+chessPieces.push(pawn13);
 const pawn14 = new Chesspiece("pawn", "f7", "black", "1", false, false, false);
+chessPieces.push(pawn14);
 const pawn15 = new Chesspiece("pawn", "g7", "black", "1", false, false, false);
+chessPieces.push(pawn15);
 const pawn16 = new Chesspiece("pawn", "h7", "black", "1", false, false, false);
+chessPieces.push(pawn16);
 
 const bishop1 = new Chesspiece("bishop", "c1", "white", "1", false, false, false);
+chessPieces.push(bishop1);
 const bishop2 = new Chesspiece("bishop", "f1", "white", "1", false, false, false);
+chessPieces.push(bishop2);
 const bishop3 = new Chesspiece("bishop", "c8", "black", "1", false, false, false);
+chessPieces.push(bishop3);
 const bishop4 = new Chesspiece("bishop", "f8", "black", "1", false, false, false);
+chessPieces.push(bishop4);
 
 const queen1 = new Chesspiece("queen", "e1", "white", "1", false, false, false);
+chessPieces.push(queen1);
 const queen2 = new Chesspiece("queen", "e8", "black", "1", false, false, false);
+chessPieces.push(queen2);
 
 const king1 = new Chesspiece("king", "d1", "white", "1", false, false, false);
+chessPieces.push(king1);
 const king2 = new Chesspiece("king", "d8", "black", "1", false, false, false);
+chessPieces.push(king2);
 
 const knight1 = new Chesspiece("knight", "b1", "white", "1", false, false, false);
+chessPieces.push(knight1);
 const knight2 = new Chesspiece("knight", "g1", "white", "1", false, false, false);
+chessPieces.push(knight2);
 const knight3 = new Chesspiece("knight", "b8", "black", "1", false, false, false);
+chessPieces.push(knight3);
 const knight4 = new Chesspiece("knight", "g8", "black", "1", false, false, false);
+chessPieces.push(knight4);
 
 /* Gavin getRow and getColumn code */
 function getColumn(str) {
