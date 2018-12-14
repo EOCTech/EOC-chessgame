@@ -83,52 +83,88 @@ chessPieces.push(knight3);
 const knight4 = new Chesspiece("knight", "g8", "black", "1", false, false, false);
 chessPieces.push(knight4);
 
-<<<<<<< HEAD
-queen1.pos = "c5";
-
-queen1.possiblePos = possiblePos(queen1);
-
+knight1.pos = "c5"
+possiblePos(knight1)
 
 function possiblePos(obj) {
     let possiblePositions = [];
     if (obj.type == "knight") {
-        
-    }
+        let currentPosition = obj.pos
 
-    if (obj.type == "pawn") {
-        
-    }
+        let letter = getColumn(currentPosition);
 
+        let number = getRow(currentPosition);
+        // first position
+        let newLetter = letter
+        let newNumber = number
+
+        newLetter = nextLetter(newLetter)
+        newNumber = newNumber - 2
+            
+        possiblePositions.push(newLetter + newNumber)
+        // second position
+        newLetter = letter
+        newNumber = number
+
+        newLetter = prevLetter(newLetter)
+        newNumber = newNumber - 2
+            
+        possiblePositions.push(newLetter + newNumber)
+        // third position
+        newLetter = letter
+        newNumber = number
+        
+        newLetter = prevLetter(newLetter)
+        newNumber = newNumber - 1
+            
+        possiblePositions.push(newLetter + newNumber)
+        
+        console.log(possiblePositions)
+    }
     if (obj.type == "queen") {
-        // looking for possible positions
-        // get the current position
+        // get current position (c5)
+        let currentPosition = obj.pos;
 
-        let currentPosition = obj.pos; // c5
+        // get the letter (c)
+        let letter = getColumn(currentPosition);
 
-        // get the letter
-        let letter = getColumn(currentPosition); // c
-
-        // get the number
-        let number = getRow(currentPosition); // 5, converted to an integer from string
+        // get the number (5)
+        let number = getRow(currentPosition);
 
         let newLetter = letter;
-        let newNumber = true;
+        let newNumber = number;
 
         while (newLetter != false && newNumber < 8) {
-            newLetter = nextLetter(newLetter); // d
-            newNumber = number++; // 6
-            console.log(newLetter + newNumber); // d6
+            newLetter = nextLetter(newLetter);
+            newNumber++;
             possiblePositions.push(newLetter + newNumber);
-
         }
+         newLetter = letter;
+         newNumber = number;
 
+        while (newLetter != false) {
+            newLetter = nextLetter(newLetter);
+            if (newLetter != false) {
+                possiblePositions.push(newLetter + newNumber);
+            }
 
-        return possiblePositions;
+            newLetter = letter;
+            newNumber = number;
+
+        while (newLetter != false && newNumber < 8) {
+            newLetter = prevLetter(newLetter);
+            newNumber++;
+            if (newLetter != false) {
+            possiblePositions.push(newLetter + newNumber);
+            }
+        }
+            
+        }
+        
     }
+    return possiblePositions;
 }
 
-=======
->>>>>>> master
 /* Gavin getRow and getColumn code */
 function getColumn(str) {
     index = 0;
