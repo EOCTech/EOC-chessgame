@@ -147,3 +147,42 @@ function prevLetter(lett) {
         return false;
     }
 }
+
+
+
+
+
+
+pawn1.pos = "h8";
+console.log(changeTypePossible(chessPieces));
+
+
+function changeTypePossible(objArray) {
+    // iterate through the array of objects
+
+    for (p = 0; p < objArray.length; p++) {
+        let letter = getColumn(objArray[p].pos); // a
+        let number = getRow(objArray[p].pos); // 5
+        let team = objArray[p].team; // white
+
+        if (team == "white" && number == 8) {
+            objArray[p].type = "queen";
+            return objArray[p];
+        }
+
+        if (team == "black" && number == 1) {
+            objArray[p].type = "queen";
+            return objArray[p];
+        }
+        
+    }
+    
+        // get the row number
+        // getRow()
+
+        // if row == 8, then the chess piece can change
+        
+        // by default, we'll change it to a queen
+}
+changeTypePossible(chessPieces);
+
